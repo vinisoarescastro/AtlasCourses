@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<script>
+    // Solicita ao usuário as informações necessárias
+    let distancia = Number(prompt("Digite a distância da viagem em quilômetros: "));
+    let consumo = Number(prompt("Digite o consumo de combustível do veículo em quilômetros por litro: "));
+    let precoCombustivel = Number(prompt("Digite o preço do combustível por litro: "));
+    
+    // Calcula a quantidade de combustível necessária
+    let combustivelNecessario = distancia / consumo;
+    
+    // Calcula o custo da viagem
+    let custoViagem = combustivelNecessario * precoCombustivel;
+    
+    alert("O custo da viagem será de R$ " + custoViagem.toFixed(2));
+    // .toFixed(2) limita o número de casas decimais a 2
+</script>

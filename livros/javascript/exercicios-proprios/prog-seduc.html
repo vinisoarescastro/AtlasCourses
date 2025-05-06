@@ -1,0 +1,29 @@
+<script>
+    // Armazena as notas das 12 disciplinas
+
+    let nDisciplinas = Number(prompt(`Quantas disciplinas o aluno cursou?`));
+
+    let notas = [];
+    for (let i = 0; i < nDisciplinas; i++) {
+        notas[i] = Number(prompt("Digite a nota da disciplina " + (i + 1) + ": "));
+        // (i + 1) é usado para que o usuário veja a disciplina 1, 2, 3, etc. e não a disciplina 0, 1, 2, etc.
+    }
+    
+    // Calcula a média final
+    let soma = notas.reduce((a, b) => a + b, 0);
+    let mediaFinal = soma / notas.length;
+    
+    // Verifica se o aluno foi aprovado, reprovado ou ficou em progressão parcial
+    let reprovacoes = notas.filter(nota => nota < 7).length;
+    let status;
+    
+    if (mediaFinal >= 7) {
+        status = "Aprovado";
+    } else if (mediaFinal < 5 || reprovacoes > 3) {
+        status = "Reprovado";
+    } else if (mediaFinal >= 5 && reprovacoes <= 3) {
+        status = "Progressão Parcial";
+    }
+    
+    alert(`A média final do aluno é ${mediaFinal.toFixed(1)} e o status é ${status}.`);
+</script>

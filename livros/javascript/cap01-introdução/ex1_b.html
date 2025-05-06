@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+
+<script>
+    // Exercicio 1_b - Capítulo 1
+    // Programa para ler o valor da conta e o número de clientes e mostrar o valor que cada cliente deve pagar
+
+    let valorConta = Number(prompt('Valor da Conta: '));                    // lê dados
+    let numeroclientes = Number(prompt('Número de Clientes: '));            // lê dados
+    
+    let dezPorCento = valorConta * 0.1 ;                            // calcula taxa do garçom
+    let valorTotalConta = valorConta + dezPorCento ;                // calcula valor total conta com taxa garçom
+    let valorPorCliente = valorTotalConta / numeroclientes ;        // processar dados
+
+    alert(`
+    Valor da Conta: R$ ${valorConta.toFixed(2)}.
+    10% Garçom: R$ ${dezPorCento.toFixed(2)}.
+    Valor Total c/ taxa: R$ ${valorTotalConta.toFixed(2)}.
+    Valor por Cliente: R$ ${valorPorCliente.toFixed(2)}.`);         // mostrar resultado
+
+</script>

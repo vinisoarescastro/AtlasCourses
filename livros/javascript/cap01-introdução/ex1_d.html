@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+    // Exercicio 1_d - Capítulo 1
+    // Programa para ler duas notas e mostrar a média e a situação do aluno
+
+    let nota1 = Number(prompt('1ª Nota: '));    // lê dados
+    let nota2 = Number(prompt('2ª Nota: '));    // lê dados
+
+    let mediaNotas = (nota1 + nota2) / 2 ;      // processa dados
+    let resultado = '';
+
+    if ( mediaNotas >= 6 ) {
+        resultado = 'Aprovado'
+    } else if ( mediaNotas >= 5) {
+        resultado = 'Dependência'
+    } else {
+        resultado = 'Reprovado'
+    }
+
+    alert(`Média: ${mediaNotas.toFixed(2)}.\nSituação Final: ${resultado}.`);   // mostra resultados
+
+</script>
