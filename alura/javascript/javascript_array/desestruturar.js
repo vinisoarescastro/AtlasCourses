@@ -15,3 +15,5 @@ function exibeNomeENota(aluno){
         console.log(`Não foi encontrado o aluno: ${aluno}, na nossa base de registro.`)
     }
 }
+
+console.log(exibeNomeENota('Juliana'))
