@@ -1,11 +1,30 @@
 function alterarStatus(id){
-
     let gameClicado = document.getElementById(`game-${id}`);
-
     let imagem = gameClicado.querySelector('.dashboard__item__img');
     let botao = gameClicado.querySelector('.dashboard__item__button');
-    let nomeJogo = gameClicado.querySelector('.dashboard__item__name');
 
-    alert(nomeJogo.textContent);
+    if (imagem.classList.contains('dashboard__item__img--rented')){ // verificar se tem uma classe no elemento
+        confirmarRemove(imagem, botao)
+    } else {
+        confirmarAdd(imagem, botao)
+    }
+}
 
+function confirmarRemove(imagem, botao){
+    let resposta = confirm('Você realmente deseja devolver o item?')
+    if (resposta){
+        imagem.classList.remove('dashboard__item__img--rented');
+        botao.classList.remove('dashboard__item__button--return')
+        botao.textContent = 'Alugar'
+    }
+}
+
+function confirmarAdd(imagem, botao){
+
+    let resposta = confirm('Você realmente deseja alugar o item?')
+    if (resposta){
+        imagem.classList.add('dashboard__item__img--rented');
+        botao.classList.add('dashboard__item__button--return')
+        botao.textContent = 'Devolver'
+    }
 }
