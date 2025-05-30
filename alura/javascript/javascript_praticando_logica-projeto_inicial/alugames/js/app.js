@@ -16,6 +16,8 @@ function confirmarRemove(imagem, botao){
         imagem.classList.remove('dashboard__item__img--rented');
         botao.classList.remove('dashboard__item__button--return')
         botao.textContent = 'Alugar'
+
+        console.log(itensLocados())
     }
 }
 
@@ -26,5 +28,12 @@ function confirmarAdd(imagem, botao){
         imagem.classList.add('dashboard__item__img--rented');
         botao.classList.add('dashboard__item__button--return')
         botao.textContent = 'Devolver'
+
+        console.log(itensLocados())
     }
+}
+
+function itensLocados(){
+    let itensLocados = document.querySelectorAll('.dashboard__item__img--rented')
+    return itensLocados.length
 }
