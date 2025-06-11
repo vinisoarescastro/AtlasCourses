@@ -5,13 +5,9 @@ const estudante = {
     turma: 'JavaScript',
     bolsista: true,
     telefones: ['5511999999999', '5562999999999'],
+    endereco: {
+        rua: 'Martins',
+        numero: '43',
+        complemento: 'Q63 L09'
+    }
 }
-
-
-estudante.endereco = {
-    rua: 'Martins',
-    numero: '43',
-    complemento: 'Q63 L09'
-}
-
-console.log(estudante.endereco.rua);
